@@ -1,5 +1,4 @@
-module.exports = {
-    trailingComma: "none",
-    tabWidth: 4,
-    semi: true
-};
+// module.export = {
+//   singleQuote: true,
+//   tabWidth: 4,
+// };

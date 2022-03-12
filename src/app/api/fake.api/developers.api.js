@@ -4,6 +4,7 @@ const developers = [
   {
     _id: "1",
     name: "Корнеева Ксения",
+    age: 24,
     stack: stack.react,
     description: "здесь можно коротко написать о себе",
     price: 25,
@@ -14,6 +15,7 @@ const developers = [
   {
     _id: "2",
     name: "Станислав Бугаевский",
+    age: 39,
     stack: stack.php,
     description: "здесь можно коротко написать о себе",
     price: 30,
@@ -23,6 +25,7 @@ const developers = [
   {
     _id: "3",
     name: "Потапова Анна",
+    age: 30,
     stack: stack.js,
     description: "здесь можно коротко написать о себе",
     price: 20,

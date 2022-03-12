@@ -1,13 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
+import CardMainPage from "./cardMainPage/cardMainPage";
 
 const CardBody = ({ src, alt, name, description, price }) => {
   return (
+    <>
     <div className="col-8">
       <div className="card mb-3 p-0">
         <div className="row g-0">
-          <div className="col-md-4">
-            <img src={src} className="img-fluid rounded-start" alt={alt} />
+          <div className="col-md-4" id="root">
+          <CardMainPage imageUrl={src} alt={alt}/>
+            {/* <img src={src} className="img-fluid rounded-start" alt={alt} /> */}
           </div>
           <div className="col-md-8">
             <div className="card-body">
@@ -21,6 +24,7 @@ const CardBody = ({ src, alt, name, description, price }) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -26,20 +26,20 @@ const CardMainPage = ({ name, age, about, imageUrl: src, alt }) => {
       };
     }, []);
     return (
-      <a ref={cardRef} className="media-card">
+      <div ref={cardRef} className="media-card">
         <span className="media-card__img-container">
           <img src={url} alt={alt} className="media-card__img" />
         </span>
         <span className="media-card__title">{name}</span>
         <span className="media-card__subtitle">{age}</span>
         <span className="media-card__subtitle">{about}</span>
-      </a>
+      </div>
     );
   };
 
   CardMainPage.propTypes = {
     name: PropTypes.string,
-    age: PropTypes.string,
+    age: PropTypes.number,
     about: PropTypes.string,
     imageUrl: PropTypes.string,
     alt: PropTypes.string

@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import "react-toastify/dist/ReactToastify.css";
-import App from "./app/app";
-import { createStore } from "./app/storage/createStore";
+import App from "./src/app/app";
+import { createStore } from "./src/app/storage/createStore";
 import { Provider } from "react-redux";
 
 const store = createStore();

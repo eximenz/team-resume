@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import FavoriteButton from "./favoriteButton";
 
-const ProductPartOnProductPage = ({
+const DeveloperPartOnDeveloperPage = ({
   src,
   alt,
   name,
@@ -19,15 +20,13 @@ const ProductPartOnProductPage = ({
         <h5 className="mt-5">Цена: {price} $ за час</h5>
       </div>
       <div className="col d-flex flex-column justify-content-around">
-        <button type="button" className="btn btn-outline-secondary">
-          В избранное
-        </button>
+        <FavoriteButton/>
       </div>
     </>
   );
 };
 
-ProductPartOnProductPage.propTypes = {
+DeveloperPartOnDeveloperPage.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -35,4 +34,4 @@ ProductPartOnProductPage.propTypes = {
   price: PropTypes.number.isRequired,
 };
 
-export default ProductPartOnProductPage;
+export default DeveloperPartOnDeveloperPage;

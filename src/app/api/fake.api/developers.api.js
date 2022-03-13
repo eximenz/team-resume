@@ -44,13 +44,15 @@ const fetchAll = () =>
       resolve(JSON.parse(localStorage.getItem("developers")));
     }, 2000);
   });
-const update = (id, data) =>
+
+const toFavorite = (id) =>
   new Promise((resolve) => {
     const developers = JSON.parse(localStorage.getItem("developers"));
-    const developerIndex = developers.findIndex((d) => d._id === id);
-    developers[developerIndex] = { ...developers[developerIndex], ...data };
-    localStorage.setItem("developers", JSON.stringify(developers));
-    resolve(developers[developerIndex]);
+    const favoriteDeveloper = developers.find((d) => d._id === id);
+    // developers[developerIndex] = { ...developers[developerIndex], ...data };
+    // localStorage.setItem("developers", JSON.stringify(developers));
+    // resolve(developers[developerIndex]);
+    resolve(favoriteDeveloper);
   });
 
 const getBy = (id) =>
@@ -66,5 +68,5 @@ const getBy = (id) =>
 export default {
   fetchAll,
   getBy,
-  update,
+  toFavorite,
 };

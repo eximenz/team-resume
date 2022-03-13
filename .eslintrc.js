@@ -23,6 +23,7 @@ module.exports = {
       "error",
       { anonymous: "always", named: "never", asyncArrow: "always" },
     ],
+    debugger: "off",
     "comma-dangle": [
       "error",
       {

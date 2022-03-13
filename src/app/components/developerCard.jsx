@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import CardBody from "./cardBody";
 import CardButton from "./cardButton";
+import FavoriteButton from "./favoriteButton";
 
 const DeveloperCard = ({ data }) => {
   return (
@@ -10,6 +11,7 @@ const DeveloperCard = ({ data }) => {
         <div key={item._id} className="row">
           <CardBody {...item} />
           <CardButton {...item} />
+          <FavoriteButton/>
         </div>
       ))}
     </>

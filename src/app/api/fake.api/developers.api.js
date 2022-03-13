@@ -10,6 +10,7 @@ const developers = [
     price: 25,
     src: "../../assets/ksusha.jpg",
     alt: "photo ksenii",
+    favorite: false,
     // здесь укажем массив из фото, ссылки на соц сети, кто что делал, бэйдж и др
   },
   {
@@ -21,6 +22,7 @@ const developers = [
     price: 30,
     src: "../../assets/stas.jpg",
     alt: "photo stasa",
+    favorite: false,
   },
   {
     _id: "3",
@@ -31,6 +33,7 @@ const developers = [
     price: 20,
     src: "../../assets/anna.jpg",
     alt: "photo ani",
+    favorite: false,
   },
 ];
 
@@ -48,11 +51,14 @@ const fetchAll = () =>
 const toFavorite = (id) =>
   new Promise((resolve) => {
     const developers = JSON.parse(localStorage.getItem("developers"));
-    const favoriteDeveloper = developers.find((d) => d._id === id);
-    // developers[developerIndex] = { ...developers[developerIndex], ...data };
-    // localStorage.setItem("developers", JSON.stringify(developers));
-    // resolve(developers[developerIndex]);
-    resolve(favoriteDeveloper);
+        const favoriteDevelopers = developers.map((dev) => {
+          if (dev._id === id) {
+            dev.favorite = !dev.favorite;
+          }
+          return dev;
+        });
+    localStorage.setItem("developers", JSON.stringify(favoriteDevelopers));
+    resolve(favoriteDevelopers);
   });
 
 const getBy = (id) =>

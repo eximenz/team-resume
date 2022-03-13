@@ -10,23 +10,25 @@ const Favorites = () => {
   users && console.log(users.map((user) => user.age));
   return (
     <>
-      {users &&
-        users.map(
-          (user) =>
-            user.favorite && (
-              <div key={user._id}>
-                <CardMainPage
-                  key={user._id}
-                  name={user.name}
-                  age={user.age}
-                  about={user.description}
-                  imageUrl={user.src}
-                  alt={user.alt}
-                />
-                <button>Удалить из избранного</button>
-              </div>
-            )
-        )}
+      <div className="container d-flex">
+        {users &&
+          users.map(
+            (user) =>
+              user.favorite && (
+                <div key={user._id} className="column m-4">
+                  <CardMainPage
+                    key={user._id}
+                    name={user.name}
+                    age={user.age}
+                    about={user.description}
+                    src={user.src}
+                    alt={user.alt}
+                  />
+                  <button>Удалить из избранного</button>
+                </div>
+              )
+          )}
+      </div>
     </>
   );
 };

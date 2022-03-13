@@ -9,8 +9,7 @@ const CardBody = ({ src, alt, name, description, price }) => {
       <div className="card mb-3 p-0">
         <div className="row g-0">
           <div className="col-md-4" id="root">
-          <CardMainPage imageUrl={src} alt={alt}/>
-            {/* <img src={src} className="img-fluid rounded-start" alt={alt} /> */}
+          <CardMainPage src={src} alt={alt}/>
           </div>
           <div className="col-md-8">
             <div className="card-body">

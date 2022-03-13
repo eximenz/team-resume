@@ -71,7 +71,6 @@ const Main = () => {
   };
   return (
     <>
-      {/* <div className="container d-flex flex-column"> */}
       <div className="containerX">
         <div className="slide-bar" id="slidebar">
           <div className="bar" id="bar"></div>
@@ -90,7 +89,6 @@ const Main = () => {
       >
         Нажми
       </button>
-      {/* </div> */}
     </>
   );
 };

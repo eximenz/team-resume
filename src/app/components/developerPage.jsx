@@ -20,9 +20,7 @@ const DeveloperPage = ({ id }) => {
             {...developerInfo}
           />
         </div>
-        <div className="row">
           <DeveloperPartOnDeveloperPage {...developerInfo} />
-        </div>
       </div>
     );
   }

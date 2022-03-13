@@ -4,7 +4,7 @@ import BookMarkCard from "../components/Cards/bookmarkCard";
 const BookMark = ({ ...props }) => {
     return (
         <>
-            <h1>Избранное</h1>
+            <h2>Избранное</h2>
             <BookMarkCard  />
         </>
     );

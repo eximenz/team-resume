@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import UserProfile from "./userProfile";
 import UserCard from "./userCard";
 import { useSelector } from "react-redux";
 import { getUsers, getUserById } from "../../storage/users";
@@ -7,7 +8,6 @@ import { getUsers, getUserById } from "../../storage/users";
 const GroupCard = () => {
     const params = useParams();
     const currentUser = useSelector(getUserById(Number(params.userId)));
-    console.log(currentUser);
     const users = useSelector(getUsers());
 
     if (
@@ -19,12 +19,12 @@ const GroupCard = () => {
         return (
             <>
                 <div className="row row-cols-1 row-cols-md-1 mt-3 g-0 justify-content-center align-content-center">
-                    <UserCard
+                    <UserProfile
                         title="Пример карточки"
-                        header={`Заголовок ${params.userId}`}
+                        userId={currentUser._id}
                         fio={currentUser.userName}
                         content="Несколько быстрых примеров текста для построения"
-                        footer="Последнее обновление 3 мин. назад"
+                        footer="Последнее обновление было "
                         borderColor="success"
                         textColor="success"
                     />
@@ -39,12 +39,11 @@ const GroupCard = () => {
                     return (
                         <UserCard
                             key={user._id}
-                            title="Карточка участника"
-                            header={`Заголовок ${user._id}`}
+                            title="Краткая информая об участнике"
                             fio={user.userName}
                             userId={user._id}
                             content="Несколько быстрых примеров текста для построения"
-                            footer="Последнее обновление 3 мин. назад"
+                            footer="Последнее обновление было "
                             borderColor={user.color}
                             textColor={user.color}
                         />

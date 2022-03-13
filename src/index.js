@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
+import "react-toastify/dist/ReactToastify.css";
 import App from "./app/app";
 import { createStore } from "./app/storage/createStore";
 import { Provider } from "react-redux";

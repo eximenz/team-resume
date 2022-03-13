@@ -7,9 +7,10 @@ import NotFound from "./layout/notfound";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 import AppLoader from "./components/hoc/appLoader";
 import history from "../app/utils/history";
-
+import { ToastContainer, toast } from "react-toastify";
 
 const App = () => {
+        toast.configure();
 
         return (
             <div>
@@ -29,6 +30,7 @@ const App = () => {
                         </Switch>
                     </Router>
                 </AppLoader>
+                <ToastContainer />
             </div>
         );
     }

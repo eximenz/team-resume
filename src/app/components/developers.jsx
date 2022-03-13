@@ -87,7 +87,7 @@ const Developers = ({ valueForFiltrationBySearch }) => {
       </div>
     );
   }
-  return "loading...";
+  return <div className="container">loading...</div>;
 };
 
 Developers.propTypes = {

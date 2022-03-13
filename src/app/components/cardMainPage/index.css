@@ -13,8 +13,8 @@
 body {
   background: var(--bg);
   display: grid;
-  place-items: center;
-  min-height: 100vh;
+  /* place-items: center;
+  min-height: 100vh; */
   font-family: "Roboto", sans-serif;
 }
 
